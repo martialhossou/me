@@ -4,27 +4,28 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Martial HOSSOU • Services et portfolio</title>
-  <meta name="description" content="Sites et applications, identité visuelle, publicités, réseaux, formations, IA et automatisation. Découvre des projets en aperçu direct et contacte Martial sur WhatsApp."/>
-  <meta name="theme-color" content="#0B0F19"/>
+  <meta name="description" content="Sites et applications, identité visuelle, publicités, réseaux, formations, IA. Découvre des projets en aperçu direct et contacte Martial sur WhatsApp."/>
+  <meta name="theme-color" content="#000000"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@700;800;900&family=Inter:wght@400;600;800;900&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0B0F19; --panel:#101525; --panel2:#0F1424;
-      --ink:#EAEEF6; --muted:#9AA4B2; --line:#1E2638;
+      --bg:#000000; --panel:#0D0F14; --panel2:#0A0C11;
+      --ink:#F2F4F8; --muted:#96A0AD; --line:#1A1D26;
       --gold:#FFD700; --gold2:#FFF099; --accent:#2EC4B6;
-      --shadow:0 22px 70px rgba(0,0,0,.45);
+      --shadow:0 22px 70px rgba(0,0,0,.55);
       --r:18px; --maxw:1240px; --vh:100vh; --blur:12px; --headerH:78px;
+      --btnH:48px; --btnPX:18px; --btnFS:15px;
     }
     [data-theme="light"]{
-      --bg:#F6F8FC; --panel:#FFFFFF; --panel2:#F3F6FC;
+      --bg:#FFFFFF; --panel:#F7F8FA; --panel2:#FFFFFF;
       --ink:#0B132B; --muted:#5C647A; --line:#E7EBF3;
-      --gold:#FFD700; --gold2:#FFEB7A; --accent:#2EC4B6;
+      --gold:#FFD700; --gold2:#FFE680; --accent:#2EC4B6;
       --shadow:0 18px 60px rgba(9,17,34,.10);
     }
     *,*::before,*::after{box-sizing:border-box}
     html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans",sans-serif;line-height:1.7;overflow-x:hidden;overscroll-behavior:y contain}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,"Noto Sans",sans-serif;line-height:1.7;overflow-x:hidden;overscroll-behavior:y none}
     img{max-width:100%;height:auto;display:block}
     a{color:inherit;text-decoration:none}
     .container{width:100%;max-width:var(--maxw);margin:auto;padding-inline:24px}
@@ -32,40 +33,40 @@
     .pill{display:inline-block;padding:.25rem .6rem;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.06)}
     .shadow{box-shadow:var(--shadow)}
     .glass{backdrop-filter:blur(var(--blur));-webkit-backdrop-filter:blur(var(--blur))}
-    .btn{display:inline-flex;align-items:center;gap:10px;padding:.8rem 1.15rem;border-radius:14px;border:1px solid rgba(255,255,255,.18);cursor:pointer;font-weight:900}
-    .btn.gold{background:linear-gradient(135deg, rgba(255,215,0,.96), rgba(255,240,153,.92)); color:#1e1500; border-color:rgba(255,215,0,.8); text-shadow:0 1px 0 rgba(255,255,255,.3); box-shadow:0 12px 36px rgba(255,215,0,.35), inset 0 0 0 1px rgba(255,255,255,.12)}
-    .btn.gold:hover{box-shadow:0 16px 44px rgba(255,215,0,.45), inset 0 0 0 1px rgba(255,255,255,.18)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:var(--btnH);padding:0 var(--btnPX);border-radius:14px;border:1px solid rgba(255,255,255,.18);cursor:pointer;font-weight:900;font-size:var(--btnFS);line-height:1;white-space:nowrap}
+    .btn.gold{background:linear-gradient(135deg, rgba(255,215,0,.98), rgba(255,240,153,.92)); color:#1e1500; border-color:rgba(255,215,0,.85); text-shadow:0 1px 0 rgba(255,255,255,.3); box-shadow:0 12px 36px rgba(255,215,0,.4), inset 0 0 0 1px rgba(255,255,255,.12)}
+    .btn.gold:hover{box-shadow:0 16px 46px rgba(255,215,0,.5), inset 0 0 0 1px rgba(255,255,255,.18)}
     .btn.ghost{background:rgba(255,255,255,.06);border:1px solid var(--line);color:var(--ink)}
     .chips{display:flex;gap:8px;flex-wrap:wrap}
 
-    /* Header opaque */
+    /* Header opaque et en une seule ligne sur desktop */
     header{position:sticky;top:0;z-index:60;border-bottom:1px solid var(--line);background:var(--panel)}
-    .nav{display:flex;align-items:center;gap:14px;min-height:var(--headerH);flex-wrap:wrap}
+    .nav{display:flex;align-items:center;gap:14px;min-height:var(--headerH);flex-wrap:nowrap}
     .brand{display:flex;align-items:center;gap:10px;margin-right:auto}
     .logoMark{width:30px;height:30px;border-radius:10px;background:conic-gradient(from 90deg, var(--gold), var(--gold2), var(--gold))}
     .logo{font-family:Sora,Inter;font-weight:900;letter-spacing:.2px;white-space:nowrap}
-    nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;flex-wrap:wrap}
+    nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;flex-wrap:nowrap}
     nav a{font-weight:800;position:relative;white-space:nowrap}
     nav a:after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width .25s}
     nav a:hover:after{width:100%}
-    .actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .actions{display:flex;align-items:center;gap:10px;flex-wrap:nowrap}
     .hamb{display:none;flex-direction:column;gap:4px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:10px;padding:10px}
     .hamb span{width:24px;height:2px;background:var(--ink)}
 
     /* Drawer mobile opaque */
     .backdrop{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;visibility:hidden;transition:.25s;z-index:59}
     .backdrop.show{opacity:1;visibility:visible}
-    .drawer{position:fixed;top:0;right:0;height:100%;width:min(84vw,380px);transform:translateX(100%);transition:.3s;z-index:60;background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column;max-width:100vw}
+    .drawer{position:fixed;top:0;right:0;height:100%;width:min(84vw,380px);transform:translateX(100%);transition:.3s;z-index:60;background:var(--panel);border-left:1px solid var(--line);display:flex;flex-direction:column}
     .drawer.open{transform:translateX(0)}
     .drawerHead{display:flex;justify-content:space-between;align-items:center;padding:16px 20px;border-bottom:1px solid var(--line)}
     .drawerClose{border:0;background:var(--gold);color:#201A00;padding:.55rem 1rem;border-radius:10px;font-weight:900}
     .drawerBody a{display:block;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:800}
 
-    /* Hero et parallaxe */
+    /* Hero et parallaxes */
     .hero{position:relative;isolation:isolate}
     .hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;min-height:calc(var(--vh) - var(--headerH));padding-block:64px}
     h1{font-family:Sora,Inter;font-weight:900;font-size:clamp(34px,5.2vw,64px);line-height:1.06;margin:0}
-    .lead{font-size:clamp(16px,1.2vw,18px);color:var(--muted);max-width:62ch}
+    .lead{font-size:clamp(16px,1.2vw,18px);color:var(--muted);max-width:64ch}
     .visual{border-radius:20px;overflow:hidden;box-shadow:var(--shadow);background:#0C1220}
     .visual img{width:100%;height:100%;object-fit:cover;aspect-ratio:16/10}
     .parallax{position:absolute;inset:0;pointer-events:none;overflow:hidden}
@@ -89,13 +90,13 @@
     .li{list-style:none;padding-left:0}
     .ok::before{content:"✓";color:var(--gold);margin-right:8px}
 
-    /* Sections spécifiques */
+    /* Benefits détaillé */
     .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .benefit h3{margin:0 0 8px}
+    .benefit p{margin:0}
     @media (max-width:980px){.benefits{grid-template-columns:1fr}}
 
-    /* Portfolio */
-    .toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}
-    .toolbar input,.toolbar select{flex:1;border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:12px;padding:.6rem .8rem;outline:none;min-width:200px}
+    /* Portfolio sans barre de recherche */
     .portfolio{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     @media (max-width:1100px){.portfolio{grid-template-columns:repeat(3,1fr)}}
     @media (max-width:820px){.portfolio{grid-template-columns:repeat(2,1fr)}}
@@ -106,9 +107,9 @@
     .ptag{position:absolute;top:8px;left:8px}
     .pbody{padding:12px}
     .pbody h4{margin:0 0 6px}
-    .pactions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .pactions{display:flex;gap:10px;flex-wrap:wrap;margin-top:10px}
 
-    /* Viewer modal */
+    /* Viewer */
     .modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:.25s;z-index:70}
     .modal.show{opacity:1;visibility:visible}
     .modalCard{width:min(96vw,1200px);height:min(86vh,900px);background:var(--panel);border:1px solid var(--line);border-radius:18px;display:flex;flex-direction:column;overflow:hidden;box-shadow:var(--shadow)}
@@ -123,14 +124,13 @@
     footer{padding-block:46px;border-top:1px solid var(--line);text-align:center}
     footer a{text-decoration:underline;color:var(--gold)}
 
-    /* Outils flottants et limites de page */
+    /* Outils flottants */
     .fab{position:fixed;right:16px;bottom:16px;display:flex;gap:8px;z-index:65}
     .toTop{width:46px;height:46px;border-radius:999px;border:1px solid var(--line);background:var(--panel);color:var(--ink);display:flex;align-items:center;justify-content:center}
-    .endStop{height:1px; overflow:hidden}
 
-    /* Chatbot WhatsApp */
-    .wafab{position:fixed;right:16px;bottom:76px;z-index:66}
-    .waBtn{width:56px;height:56px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:linear-gradient(145deg,#25D366,#128C7E);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(18,140,126,.35);cursor:pointer}
+    /* Bot IA flottant */
+    .aifab{position:fixed;right:16px;bottom:76px;z-index:66}
+    .aiBtn{width:56px;height:56px;border-radius:999px;border:1px solid rgba(255,255,255,.25);background:linear-gradient(145deg,#1F5CFF,#1027A6);color:#fff;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 34px rgba(16,39,166,.35);cursor:pointer}
     .bot{position:fixed;right:16px;bottom:140px;width:min(92vw,380px);max-height:66vh;border-radius:16px;border:1px solid var(--line);background:var(--panel);box-shadow:var(--shadow);display:none;flex-direction:column;overflow:hidden;z-index:66}
     .bot.show{display:flex}
     .botHead{display:flex;align-items:center;justify-content:space-between;background:var(--panel2);padding:10px 12px;border-bottom:1px solid var(--line)}
@@ -142,7 +142,7 @@
     .botFoot input{flex:1;border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:12px;padding:.6rem .8rem;outline:none}
     .botFoot button{border:0;background:var(--gold);color:#1B1300;border-radius:12px;padding:.6rem .9rem;font-weight:900;cursor:pointer}
 
-    /* Drawer pop up 30s */
+    /* Pop up 30s */
     .announce{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.65);z-index:71;opacity:0;visibility:hidden;transition:.25s}
     .announce.show{opacity:1;visibility:visible}
     .announceCard{width:min(92vw,660px);background:var(--panel);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow);overflow:hidden}
@@ -151,6 +151,9 @@
     .announceFoot{padding:12px;border-top:1px solid var(--line);display:flex;gap:10px;justify-content:flex-end}
 
     /* Responsive */
+    @media (max-width:1100px){
+      .actions{gap:8px}
+    }
     @media (max-width:980px){
       nav{display:none}
       .hamb{display:flex}
@@ -170,11 +173,11 @@
       <a class="brand" href="#home" id="brand"><span class="logoMark"></span><span class="logo">Martial HOSSOU</span></a>
       <nav>
         <ul>
-          <li><a href="#about" data-i18n="nav_about">À propos</a></li>
-          <li><a href="#services" data-i18n="nav_services">Services</a></li>
-          <li><a href="#benefits" data-i18n="nav_benefits">Ce que vous gagnez</a></li>
-          <li><a href="#portfolio" data-i18n="nav_portfolio">Portfolio</a></li>
-          <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+          <li><a href="#about">À propos</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#benefits">Ce que vous gagnez</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
       <div class="actions">
@@ -206,172 +209,108 @@
     </div>
     <div class="container">
       <div>
-        <h1 data-i18n="hero_q">Tu veux plus de clients dès cette semaine</h1>
-        <p class="lead" data-i18n="hero_lead">Je crée et lance des contenus et des outils clairs qui donnent envie d acheter. Message simple, design propre, parcours sans friction et mise en ligne rapide. Je m adapte à ton budget et à tes objectifs.</p>
+        <h1>Tu veux plus de clients dès cette semaine</h1>
+        <p class="lead">Je crée et lance des contenus et des outils clairs qui donnent envie d acheter. Message simple, design propre, parcours fluide et mise en ligne rapide. Je m adapte à ton budget et à tes objectifs.</p>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:10px">
-          <a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener" data-i18n="cta_whatsapp">Parler de ton projet sur WhatsApp</a>
-          <a class="btn ghost" href="#portfolio" data-i18n="cta_portfolio">Voir des exemples</a>
+          <a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Parler de ton projet sur WhatsApp</a>
+          <a class="btn ghost" href="#portfolio">Voir des exemples</a>
         </div>
       </div>
       <div class="visual">
-        <img src="https://picsum.photos/seed/business-team/1400/900" alt="Equipe en travail sur projet" onerror="this.onerror=null;this.src='data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22800%22 height=%22600%22%3E%3Crect width=%22100%25%22 height=%22100%25%22 fill=%22%2318202f%22/%3E%3Ctext x=%2250%25%22 y=%2250%25%22 dominant-baseline=%22middle%22 text-anchor=%22middle%22 fill=%22%237a849a%22 font-family=%22Inter,Arial%22 font-size=%2226%22%3EImage%20business%3C/text%3E%3C/svg%3E';">
+        <img src="https://picsum.photos/seed/business-team/1400/900" alt="Equipe au travail" onerror="this.onerror=null;this.src='https://picsum.photos/seed/fallback-biz/1400/900';">
       </div>
     </div>
   </section>
 
-  <!-- À propos -->
+  <!-- À propos (épuré) -->
   <section id="about">
     <div class="container">
-      <h2 class="title" data-i18n="about_title">À propos</h2>
-      <p class="sub" data-i18n="about_sub">Je conçois des identités fortes et des expériences web rapides avec une démarche orientée résultat. Objectif simple • créer de la valeur pour tes clients et de la croissance pour ton activité.</p>
+      <h2 class="title">À propos</h2>
+      <p class="sub">Je t accompagne de l idée au lancement pour que tes pages, visuels et outils parlent enfin à tes clients. Le but est simple • plus de clarté, plus de demandes, plus de ventes.</p>
       <div class="grid3">
-        <article class="card"><div class="hd"><strong>Position</strong></div><div class="bd">Je te guide du besoin à la mise en ligne avec clarté. Tu gardes la main sur les décisions, je gère la qualité et le rythme.</div></article>
-        <article class="card"><div class="hd"><strong>Process</strong></div><div class="bd">Diagnostic et plan clair • maquette validée par étapes • production soignée • lancement et optimisation.</div></article>
-        <article class="card"><div class="hd"><strong>Contact</strong></div><div class="bd">WhatsApp • <a href="https://wa.me/22952964028" target="_blank" rel="noopener">+229 52 96 40 28</a> • <a href="https://facebook.com/creativeentreprise" target="_blank" rel="noopener">CREATIVE ENTREPRISE</a></div></article>
+        <article class="card">
+          <div class="hd"><strong>Contact</strong></div>
+          <div class="bd">
+            <div>WhatsApp • <a href="https://wa.me/22952964028" target="_blank" rel="noopener">+229 52 96 40 28</a></div>
+            <div><a href="https://facebook.com/creativeentreprise" target="_blank" rel="noopener">CREATIVE ENTREPRISE</a></div>
+          </div>
+        </article>
+        <article class="card">
+          <div class="hd"><strong>Engagement</strong></div>
+          <div class="bd">Des livrables clairs, un suivi simple et des décisions faciles à prendre à chaque étape.</div>
+        </article>
+        <article class="card">
+          <div class="hd"><strong>Résultat</strong></div>
+          <div class="bd">Chaque action sert un objectif précis et visible par tes clients et ton équipe.</div>
+        </article>
       </div>
     </div>
   </section>
 
-  <!-- Services non groupés avec copy vendeuse -->
+  <!-- Services non groupés, CTA unique -->
   <section id="services">
     <div class="container">
-      <h2 class="title" data-i18n="srv_title">Services</h2>
-      <p class="sub" data-i18n="srv_sub">Choisis ce qui te fait gagner des clients maintenant. Chaque service est calibré pour donner un résultat clair et mesurable.</p>
+      <h2 class="title">Services</h2>
+      <p class="sub">Choisis ce qui te fait gagner des clients maintenant. Chaque service est calibré pour un résultat clair et mesurable.</p>
 
       <div class="grid3">
-        <article class="card">
-          <div class="hd"><strong>Logo</strong></div>
-          <div class="bd"><p>Un signe simple et mémorable qui inspire confiance. Je livre des fichiers prêts pour impression et réseaux, avec une mini notice d usage.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Commencer</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Charte graphique</strong></div>
-          <div class="bd"><p>Couleurs, typographies et règles claires pour un rendu constant. Ta marque respire la cohérence à chaque point de contact.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Créer la charte</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Affiches et flyers</strong></div>
-          <div class="bd"><p>Un message direct et un visuel qui attire. Version réseau et version impression incluses pour diffuser sans attendre.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Lancer la campagne</a></div>
-        </article>
+        <!-- Identité -->
+        <article class="card"><div class="hd"><strong>Logo</strong></div><div class="bd"><p>Un signe simple et mémorable qui inspire confiance. Fichiers prêts pour impression et réseaux avec une notice claire.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Charte graphique</strong></div><div class="bd"><p>Couleurs et typographies qui fixent ton style. Tu parais sérieux et cohérent à chaque point de contact.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Affiches et flyers</strong></div><div class="bd"><p>Un message direct qui attire l attention. Formats prêts pour impression et réseaux pour diffuser sans attendre.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
 
-        <article class="card">
-          <div class="hd"><strong>Vidéo publicitaire</strong></div>
-          <div class="bd"><p>Des vidéos courtes qui donnent envie d agir. Script simple, sous titres, format pour TikTok et Meta. Tu postes et tu vois l effet.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Créer la vidéo</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Site vitrine</strong></div>
-          <div class="bd"><p>Un site rapide, clair et beau. Tes visiteurs comprennent en quelques secondes ce que tu proposes et comment te contacter.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Démarrer le site</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Boutique en ligne</strong></div>
-          <div class="bd"><p>Catalogue propre, fiches qui vendent, panier démo pour présenter le parcours. Intégration d une solution de paiement adaptée sur demande.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Structurer la boutique</a></div>
-        </article>
+        <!-- Contenu et pub -->
+        <article class="card"><div class="hd"><strong>Vidéo publicitaire</strong></div><div class="bd"><p>Des vidéos courtes qui donnent envie d agir. Script simple, sous titres et formats pour TikTok et Meta.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Campagnes Meta</strong></div><div class="bd"><p>Plan clair, tests créatifs et suivi simple. Chaque dépense sert un objectif clair en haut comme en bas de tunnel.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Campagnes TikTok</strong></div><div class="bd"><p>Formats courts et ciblage propre. Tu vois vite ce qui capte et ce qui convertit pour ton offre.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
 
-        <article class="card">
-          <div class="hd"><strong>Application web</strong></div>
-          <div class="bd"><p>Interface claire et rapide pour un besoin précis. Composants soignés, sécurité côté navigateur et déploiement simple.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Concevoir l app</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Application mobile</strong></div>
-          <div class="bd"><p>Approche progressive pour publier vite. Icône, écran de lancement et ajout sur l écran d accueil sans attendre un store.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Lancer l app</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Conversion site vers app</strong></div>
-          <div class="bd"><p>Ton site devient installable. Mise en cache, icône et expérience fluide pour engager plus souvent.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Convertir maintenant</a></div>
-        </article>
+        <article class="card"><div class="hd"><strong>Campagnes Instagram</strong></div><div class="bd"><p>Stories et Reels qui captent et dirigent vers ton offre. Rapports simples pour ajuster au bon moment.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Gestion réseaux</strong></div><div class="bd"><p>Calendrier éditorial, visuels et vidéos courtes. Tu restes présent sans y passer tes journées.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
 
-        <article class="card">
-          <div class="hd"><strong>Refonte</strong></div>
-          <div class="bd"><p>Tu gardes l essentiel, on corrige ce qui bloque. Parcours simplifié, style actuel et contenu qui donne envie d aller plus loin.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Améliorer le site</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Campagnes Meta</strong></div>
-          <div class="bd"><p>Plan simple, créatifs testés, suivi clair. Je pilote pour que chaque dépense serve un objectif précis.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Activer Meta</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Campagnes TikTok</strong></div>
-          <div class="bd"><p>Des formats courts et percutants avec ciblage propre. L idée est claire, l impact se voit vite.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Activer TikTok</a></div>
-        </article>
+        <!-- Web et apps -->
+        <article class="card"><div class="hd"><strong>Site vitrine</strong></div><div class="bd"><p>Un site rapide et beau. Tes visiteurs comprennent en quelques secondes ce que tu proposes et comment te contacter.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Boutique en ligne</strong></div><div class="bd"><p>Catalogue propre, fiches qui vendent et parcours simple. Paiement réel possible selon ton pays et ta banque.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Application web</strong></div><div class="bd"><p>Interface claire et composants utiles pour un besoin précis. Déploiement simple et évolutif.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
 
-        <article class="card">
-          <div class="hd"><strong>Campagnes Instagram</strong></div>
-          <div class="bd"><p>Stories et Reels pensés pour capter et diriger vers ton offre. Rapports simples pour ajuster au bon moment.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Activer Instagram</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Gestion réseaux</strong></div>
-          <div class="bd"><p>Calendrier éditorial, visuels, vidéos courtes et réponses. Tu restes présent sans y passer tes journées.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Organiser les pages</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Formation vendre en ligne</strong></div>
-          <div class="bd"><p>De l idée à la première vente. Offre claire, page qui convertit et actions simples pour attirer des clients.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Suivre la formation</a></div>
-        </article>
+        <article class="card"><div class="hd"><strong>Application mobile</strong></div><div class="bd"><p>Approche progressive pour publier vite. Icône, écran de lancement et ajout sur l écran d accueil.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Conversion site vers app</strong></div><div class="bd"><p>Ton site devient installable. Mise en cache et expérience fluide pour engager plus souvent.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Refonte</strong></div><div class="bd"><p>Tu gardes l essentiel, on corrige ce qui bloque. Parcours simplifié, style actuel et contenu convaincant.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
 
-        <article class="card">
-          <div class="hd"><strong>Formation site</strong></div>
-          <div class="bd"><p>Créer un site utile et beau. Contenu, SEO de base et mise en ligne pour être visible vite.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Apprendre maintenant</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Formation app web</strong></div>
-          <div class="bd"><p>Concevoir une app claire avec composants et logique simple. Tu repars avec une base solide.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Lancer l atelier</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Formation campagnes</strong></div>
-          <div class="bd"><p>Ciblage, budget, analyse et optimisation. Tu sais piloter tes annonces avec confiance.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Devenir autonome</a></div>
-        </article>
+        <!-- Formations et IA -->
+        <article class="card"><div class="hd"><strong>Formation vendre en ligne</strong></div><div class="bd"><p>De l idée à la première vente. Offre claire, page qui convertit et actions simples pour attirer des clients.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Formation site</strong></div><div class="bd"><p>Créer un site utile et beau. Contenu, SEO de base et mise en ligne pour être visible vite.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Formation app web</strong></div><div class="bd"><p>Concevoir une app claire avec composants et logique simple. Tu repars avec une base solide.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
 
-        <article class="card">
-          <div class="hd"><strong>Formation WordPress</strong></div>
-          <div class="bd"><p>De l installation aux réglages utiles. Thème, extensions fiables et sécurité simple.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Démarrer WordPress</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Ateliers IA</strong></div>
-          <div class="bd"><p>Prompts utiles, automatisations no code et low code et cas concrets pour gagner du temps au quotidien.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Planifier un atelier</a></div>
-        </article>
-        <article class="card">
-          <div class="hd"><strong>Conseil et suivi</strong></div>
-          <div class="bd"><p>Tu n es pas seul. Je t accompagne pour prioriser et garder le cap, au rythme qui te convient.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Parler maintenant</a></div>
-        </article>
+        <article class="card"><div class="hd"><strong>Formation campagnes</strong></div><div class="bd"><p>Ciblage, budget, analyse et optimisation. Tu sais piloter tes annonces avec confiance.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Formation WordPress</strong></div><div class="bd"><p>De l installation aux réglages utiles. Thème, extensions fiables et sécurité simple.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+        <article class="card"><div class="hd"><strong>Ateliers IA</strong></div><div class="bd"><p>Prompts utiles et automatisations no code et low code. Cas concrets pour gagner du temps au quotidien.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
+
+        <article class="card"><div class="hd"><strong>Conseil et suivi</strong></div><div class="bd"><p>Tu n es pas seul. Je t aide à prioriser et à garder le cap, avec un rythme adapté à tes contraintes.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div></article>
       </div>
     </div>
   </section>
 
-  <!-- Ce que vous gagnez -->
+  <!-- Ce que vous gagnez (plus détaillé) -->
   <section id="benefits">
     <div class="container">
-      <h2 class="title" data-i18n="bn_title">Ce que vous gagnez</h2>
-      <p class="sub" data-i18n="bn_sub">Plus de clarté, plus de confiance, plus de ventes. Des actions simples qui font une vraie différence.</p>
+      <h2 class="title">Ce que vous gagnez</h2>
+      <p class="sub">Plus de clarté, plus de confiance, plus de ventes. Des actions simples qui font une vraie différence.</p>
       <div class="benefits">
-        <article class="card"><div class="bd"><strong>Visibilité</strong><p class="muted">Tu parais crédible et sérieux partout • site, réseaux et supports.</p></div></article>
-        <article class="card"><div class="bd"><strong>Conversion</strong><p class="muted">Le visiteur comprend en quelques secondes et sait quoi faire.</p></div></article>
-        <article class="card"><div class="bd"><strong>Vitesse</strong><p class="muted">Tu lances vite, tu ajustes et tu progresses sans perdre de temps.</p></div></article>
+        <article class="card benefit"><div class="bd"><h3>Clarté</h3><p class="muted">Ton message est compris en quelques secondes. Tes offres sont visibles et faciles à choisir.</p></div></article>
+        <article class="card benefit"><div class="bd"><h3>Crédibilité</h3><p class="muted">Une image propre et cohérente qui rassure. Tes pages et tes visuels donnent envie de te faire confiance.</p></div></article>
+        <article class="card benefit"><div class="bd"><h3>Conversion</h3><p class="muted">Des parcours simples qui mènent vers un contact ou une vente. Ton trafic devient des résultats.</p></div></article>
+        <article class="card benefit"><div class="bd"><h3>Vitesse</h3><p class="muted">Tu lances vite, tu ajustes et tu progresses. Pas de complexité inutile.</p></div></article>
+        <article class="card benefit"><div class="bd"><h3>Autonomie</h3><p class="muted">Des livrables faciles à utiliser. Tu peux publier et mettre à jour sans peine.</p></div></article>
+        <article class="card benefit"><div class="bd"><h3>Suivi</h3><p class="muted">Un point simple et régulier pour garder le cap et prioriser ce qui rapporte.</p></div></article>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio -->
+  <!-- Portfolio (sans barre de recherche) -->
   <section id="portfolio">
     <div class="container">
-      <h2 class="title" data-i18n="pf_title">Portfolio</h2>
-      <p class="sub" data-i18n="pf_sub">Aperçu dans le site • ouverture externe possible.</p>
-
-      <div class="toolbar">
-        <input id="pfSearch" placeholder="Rechercher"/>
-        <select id="pfFilter">
-          <option value="">Tous</option>
-          <option>Vitrine</option>
-          <option>Boutique</option>
-          <option>Outil</option>
-          <option>Jeu</option>
-          <option>Santé</option>
-          <option>Juridique</option>
-          <option>Voyage</option>
-          <option>Streaming</option>
-          <option>Blog</option>
-          <option>Lecture</option>
-          <option>Marketing</option>
-          <option>Fintech</option>
-          <option>Analytics</option>
-        </select>
-      </div>
-
+      <h2 class="title">Portfolio</h2>
+      <p class="sub">Parcourez des projets réels en aperçu direct. Cliquez sur « Voir » pour ouvrir dans le site, ou « Ouvrir le site » pour une nouvelle fenêtre.</p>
       <div class="portfolio" id="pfGrid"></div>
     </div>
   </section>
@@ -381,11 +320,11 @@
     <div class="container">
       <div class="band">
         <div>
-          <h3 class="min0" data-i18n="cta_title">On fait le point et on lance</h3>
-          <p class="muted min0" data-i18n="cta_sub">Réponse rapide • WhatsApp direct avec Martial HOSSOU</p>
+          <h3 class="min0">On fait le point et on lance</h3>
+          <p class="muted min0">Réponse rapide • WhatsApp direct avec Martial HOSSOU</p>
         </div>
         <div style="display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener" data-i18n="cta_whatsapp">Parler sur WhatsApp</a>
+          <a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Parler sur WhatsApp</a>
           <a class="btn ghost" href="https://facebook.com/creativeentreprise" target="_blank" rel="noopener">CREATIVE ENTREPRISE</a>
         </div>
       </div>
@@ -399,22 +338,22 @@
       <div class="muted">Site de présentation réalisé par Martial HOSSOU • CEO de <a href="https://facebook.com/creativeentreprise" target="_blank" rel="noopener">CREATIVE ENTREPRISE</a></div>
     </div>
   </footer>
-  <div class="endStop" aria-hidden="true"></div>
 
   <!-- Outils flottants -->
   <div class="fab">
     <button class="toTop" id="toTop" aria-label="Retour en haut">↑</button>
   </div>
-  <div class="wafab">
-    <button class="waBtn" id="waOpen" aria-label="Ouvrir le mini bot">
-      <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff"><path d="M12 2a10 10 0 0 0-8.9 14.6L2 22l5.6-1.5A10 10 0 1 0 12 2zM7 18l.3-.1A8 8 0 1 1 20 12a8 8 0 0 1-13 6l-.1.3L7 18z"/><path d="M16.6 13.9c-.2-.1-1.3-.6-1.5-.7-.2-.1-.4-.1-.6.1-.2.2-.7.7-.8.8-.2.2-.3.2-.6.1s-1.2-.5-2.2-1.4c-.8-.7-1.4-1.6-1.6-1.9-.2-.3 0-.4.1-.6.1-.1.2-.3.3-.4.1-.1.1-.2.2-.3.1-.1.1-.2 0-.4 0-.1-.6-1.5-.8-1.9-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.6.3-.2.2-.8.8-.8 2s.8 2.3.9 2.4c.1.2 1.5 2.3 3.6 3.2.5.2 1 .4 1.3.5.6.2 1.1.2 1.5.1.5-.1 1.3-.5 1.5-1 .2-.5.2-.9.1-1 0-.1-.2-.1-.4-.2z"/></svg>
+  <div class="aifab">
+    <button class="aiBtn" id="aiOpen" aria-label="Ouvrir le bot IA">
+      <!-- Icône robot -->
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="#fff" aria-hidden="true"><path d="M11 2h2v2h-2zM7 7a5 5 0 0 1 10 0h1a3 3 0 0 1 3 3v6a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-6a3 3 0 0 1 3-3h1zm-2 3a1 1 0 0 0-1 1v5a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-5a1 1 0 0 0-1-1H5zM8 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
     </button>
   </div>
 
-  <!-- Mini bot -->
+  <!-- Mini bot IA -->
   <div class="bot" id="bot">
     <div class="botHead">
-      <strong>Assistant</strong>
+      <strong>Assistant IA</strong>
       <div style="display:flex;gap:6px;align-items:center">
         <button class="btn ghost" id="botLang">FR EN</button>
         <button class="drawerClose" id="botClose">Fermer</button>
@@ -450,11 +389,11 @@
   <div class="announce" id="ad">
     <div class="announceCard">
       <div class="announceHead">
-        <strong>Prêt à faire grandir ton activité</strong>
+        <strong>Envie de résultats concrets</strong>
         <button class="drawerClose" id="adClose">Fermer</button>
       </div>
       <div class="announceBody">
-        <p>Je crée un plan simple avec visuels, site et actions qui donnent des résultats. Parlons de ton projet maintenant et lançons ce qui peut rapporter vite.</p>
+        <p>Je prépare un plan simple avec visuels, pages et actions qui donnent des résultats. Discutons sur WhatsApp et lançons ce qui peut rapporter vite.</p>
       </div>
       <div class="announceFoot">
         <a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">Contacter sur WhatsApp</a>
@@ -463,16 +402,16 @@
   </div>
 
   <script>
-    /* Outils */
+    /* Utilitaires */
     const $=s=>document.querySelector(s), $$=s=>document.querySelectorAll(s);
     history.scrollRestoration='manual'; window.scrollTo({top:0,behavior:'instant'});
-    const yearEl=$('#year'); yearEl.textContent=new Date().getFullYear();
+    const yearEl=$('#year'); if(yearEl) yearEl.textContent=new Date().getFullYear();
 
-    /* Logo reload et retour haut */
+    /* Logo recharge et retour haut */
     $('#brand').addEventListener('click',e=>{e.preventDefault(); location.reload();});
     const toTop=$('#toTop'); window.addEventListener('scroll',()=>{toTop.style.opacity = scrollY>420?1:0},{passive:true}); toTop.addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 
-    /* Drawer mobile opaque */
+    /* Drawer mobile */
     const drawer=$('#drawer'), burger=$('#burger'), backdrop=$('#backdrop'), drawerClose=$('#drawerClose');
     function openDrawer(){drawer.classList.add('open');backdrop.classList.add('show');drawer.setAttribute('aria-hidden','false')}
     function closeDrawer(){drawer.classList.remove('open');backdrop.classList.remove('show');drawer.setAttribute('aria-hidden','true')}
@@ -480,24 +419,19 @@
     if(drawerClose){ drawerClose.addEventListener('click',closeDrawer); }
     if(backdrop){ backdrop.addEventListener('click',closeDrawer); }
 
-    /* Hauteur header */
+    /* Hauteur header et largeur max */
     function setHeaderH(){ document.documentElement.style.setProperty('--headerH', (document.getElementById('hdr').offsetHeight||78)+'px'); }
     window.addEventListener('load',setHeaderH); window.addEventListener('resize',()=>{clearTimeout(window._rh); window._rh=setTimeout(setHeaderH,120)});
+    (function enforceLayout(){
+      document.body.style.overflowX='hidden';
+      $$('.container').forEach(c=>{ c.style.maxWidth='1240px'; c.style.margin='0 auto'; });
+    })();
 
-    /* Parallaxe interactif global */
+    /* Parallaxe interactif */
     const layers=$$('.layer');
-    function parallaxMove(x,y){
-      layers.forEach((el,i)=>{
-        const dx=(x-0.5)*(12+i*6), dy=(y-0.5)*(12+i*6);
-        el.style.transform=`translate3d(${dx}px,${dy}px,0)`;
-      });
-    }
-    window.addEventListener('pointermove',e=>{
-      const x=e.clientX/window.innerWidth, y=e.clientY/window.innerHeight; parallaxMove(x,y);
-    });
-    window.addEventListener('scroll',()=>{
-      const y=window.scrollY/600; layers.forEach((el,i)=>{ el.style.transform=`translate3d(${i*6}px,${y*20}px,0)`; });
-    },{passive:true});
+    function parallaxMove(x,y){ layers.forEach((el,i)=>{ const dx=(x-0.5)*(12+i*6), dy=(y-0.5)*(12+i*6); el.style.transform=`translate3d(${dx}px,${dy}px,0)`; }); }
+    window.addEventListener('pointermove',e=>{ parallaxMove(e.clientX/window.innerWidth, e.clientY/window.innerHeight); });
+    window.addEventListener('scroll',()=>{ const y=window.scrollY/600; layers.forEach((el,i)=>{ el.style.transform=`translate3d(${i*6}px,${y*20}px,0)`; }); },{passive:true});
 
     /* Thème et langue */
     const themeToggle=$('#themeToggle'), langToggle=$('#langToggle');
@@ -505,37 +439,11 @@
     let CUR_LANG='fr'; langToggle.addEventListener('click',()=>{CUR_LANG = CUR_LANG==='fr'?'en':'fr'; applyI18n();});
 
     const I18N={
-      fr:{
-        nav_about:'À propos', nav_services:'Services', nav_benefits:'Ce que vous gagnez', nav_portfolio:'Portfolio', nav_contact:'Contact',
-        hero_q:'Tu veux plus de clients dès cette semaine',
-        hero_lead:'Je crée et lance des contenus et des outils clairs qui donnent envie d acheter. Message simple, design propre, parcours sans friction et mise en ligne rapide. Je m adapte à ton budget et à tes objectifs.',
-        cta_whatsapp:'Parler de ton projet sur WhatsApp', cta_portfolio:'Voir des exemples',
-        about_title:'À propos', about_sub:'Je conçois des identités fortes et des expériences web rapides avec une démarche orientée résultat. Objectif simple • créer de la valeur pour tes clients et de la croissance pour ton activité.',
-        srv_title:'Services', srv_sub:'Choisis ce qui te fait gagner des clients maintenant. Chaque service est calibré pour un résultat clair et mesurable.',
-        bn_title:'Ce que vous gagnez', bn_sub:'Plus de clarté, plus de confiance, plus de ventes. Des actions simples qui font une vraie différence.',
-        pf_title:'Portfolio', pf_sub:'Aperçu dans le site • ouverture externe possible',
-        cta_title:'On fait le point et on lance', cta_sub:'Réponse rapide • WhatsApp direct avec Martial HOSSOU'
-      },
-      en:{
-        nav_about:'About', nav_services:'Services', nav_benefits:'What you gain', nav_portfolio:'Portfolio', nav_contact:'Contact',
-        hero_q:'Do you want more clients this week',
-        hero_lead:'I launch clear content and tools that make people want to buy. Simple message, clean design, smooth journey and fast go live. I adapt to your budget and goals.',
-        cta_whatsapp:'Talk about your project on WhatsApp', cta_portfolio:'See examples',
-        about_title:'About', about_sub:'I design strong identities and fast web experiences with a results driven mindset. One goal • value for your clients and growth for your business.',
-        srv_title:'Services', srv_sub:'Pick what brings clients now. Each service aims at a clear measurable outcome.',
-        bn_title:'What you gain', bn_sub:'More clarity, more trust, more sales. Simple actions that make a real difference.',
-        pf_title:'Portfolio', pf_sub:'Preview inside the site • external open available',
-        cta_title:'Let us align and launch', cta_sub:'Quick answer • direct WhatsApp with Martial HOSSOU'
-      }
+      fr:{}, en:{}
     };
-    function applyI18n(){
-      $$('[data-i18n]').forEach(el=>{ const k=el.getAttribute('data-i18n'); el.textContent = I18N[CUR_LANG][k] || el.textContent; });
-      $('#botLang').textContent = CUR_LANG==='fr' ? 'FR EN' : 'EN FR';
-      $('#botInput').placeholder = CUR_LANG==='fr' ? 'Pose ta question' : 'Ask your question';
-    }
-    applyI18n();
+    function applyI18n(){ /* textes principaux déjà en FR, bascule laissée pour future extension */ }
 
-    /* Portfolio data sans le site "moi" */
+    /* Portfolio data (sans "Moi") */
     const PORTFOLIO=[
       {t:'LuxeMart', type:'Boutique', url:'https://martialhossou.github.io/LuxeMart/', img:'https://picsum.photos/seed/shop-1/900/600'},
       {t:'CE PDF', type:'Outil', url:'https://martialhossou.github.io/CE-PDF/', img:'https://picsum.photos/seed/tool-1/900/600'},
@@ -555,7 +463,7 @@
       {t:'ClipFeed', type:'Streaming', url:'https://martialhossou.github.io/ClipFeed/', img:'https://picsum.photos/seed/stream-2/900/600'}
     ];
 
-    const pfGrid=$('#pfGrid'), pfSearch=$('#pfSearch'), pfFilter=$('#pfFilter');
+    const pfGrid=$('#pfGrid');
     function pfCard(p){
       return `<article class="pitem">
         <div class="pcover"><img src="${p.img}" alt="${p.t}" onerror="this.onerror=null;this.src='https://picsum.photos/seed/fallback/900/600';"><span class="pill ptag">${p.type}</span></div>
@@ -568,23 +476,13 @@
       </article>`;
     }
     function mountPortfolio(list){ pfGrid.innerHTML=list.map(pfCard).join(''); }
-    function applyPf(){
-      const q=(pfSearch.value||'').toLowerCase().trim();
-      const f=(pfFilter.value||'').trim();
-      let list=[...PORTFOLIO];
-      if(f) list=list.filter(x=>x.type===f);
-      if(q) list=list.filter(x=>x.t.toLowerCase().includes(q) || x.type.toLowerCase().includes(q));
-      mountPortfolio(list);
-    }
     mountPortfolio(PORTFOLIO);
-    pfSearch.addEventListener('input',()=>{clearTimeout(pfSearch._t); pfSearch._t=setTimeout(applyPf,120)});
-    pfFilter.addEventListener('input',applyPf);
 
     /* Viewer */
     const viewer=$('#viewer'), vClose=$('#vClose'), vFrame=$('#vFrame'), vFail=$('#vFail'), vLink=$('#vLink'), vNewTab=$('#vNewTab'), vTitle=$('#vTitle');
     function openView(url,title){
       vTitle.textContent=title; vFrame.src=url; vNewTab.href=url; vLink.href=url; vFail.style.display='none'; viewer.classList.add('show');
-      const timer=setTimeout(()=>{ vFail.style.display='block'; }, 2000);
+      const timer=setTimeout(()=>{ vFail.style.display='block'; }, 2200);
       vFrame.onload=()=>{ clearTimeout(timer); };
     }
     function closeView(){ viewer.classList.remove('show'); vFrame.src='about:blank'; }
@@ -595,100 +493,86 @@
     });
     vClose.addEventListener('click',closeView); viewer.addEventListener('click',e=>{ if(e.target===viewer) closeView(); });
 
-    /* WhatsApp mini bot enrichi */
-    const bot=$('#bot'), botBody=$('#botBody'), botInput=$('#botInput'), botSend=$('#botSend'), waOpen=$('#waOpen'), botClose=$('#botClose'), botLang=$('#botLang');
+    /* Bot IA enrichi */
+    const bot=$('#bot'), botBody=$('#botBody'), botInput=$('#botInput'), botSend=$('#botSend'), aiOpen=$('#aiOpen'), botClose=$('#botClose'), botLang=$('#botLang');
     const WA_LINK='https://wa.me/22952964028';
+    const GREETINGS=['salut','bonjour','bonsoir','hey','coucou','yo','bjr','bsr','hello','hi','good morning','good evening'];
     function addMsg(txt,who='ai'){ const d=document.createElement('div'); d.className='msg '+who; d.textContent=txt; botBody.appendChild(d); botBody.scrollTop=botBody.scrollHeight; }
-    function openBot(){ bot.classList.add('show'); if(!bot._hello){ addMsg('Salut je peux répondre sur design web app pub formation et IA','ai'); addMsg('Tu peux écrire bonjour ou dire ce que tu cherches','ai'); bot._hello=true; } }
+    function openBot(){ bot.classList.add('show'); if(!bot._hello){ addMsg('Bonjour je suis l assistant de Martial je t aide à choisir la meilleure action pour gagner des clients', 'ai'); addMsg('Dis ce que tu veux faire ou tape par exemple logo site boutique pub formation', 'ai'); bot._hello=true; } }
     function closeBot(){ bot.classList.remove('show'); }
-    waOpen.addEventListener('click',openBot); botClose.addEventListener('click',closeBot);
-    botLang.addEventListener('click',()=>{ CUR_LANG= CUR_LANG==='fr'?'en':'fr'; applyI18n(); addMsg(CUR_LANG==='fr'?'Langue FR active':'Language EN active','ai'); });
+    aiOpen.addEventListener('click',openBot); botClose.addEventListener('click',closeBot);
+    botLang.addEventListener('click',()=>{ CUR_LANG= CUR_LANG==='fr'?'en':'fr'; addMsg(CUR_LANG==='fr'?'Langue FR active':'Language EN active','ai'); });
 
-    const GREETINGS=['salut','bonjour','bonsoir','hey','coucou','yo','bjr','bsr','hello','hi'];
-    const ROUTES={
-      branding:['logo','identite','charte','graphique','couleur','typo'],
-      print:['affiche','flyer','poster','impression'],
-      video:['video','spot','reel','story'],
-      site:['site','vitrine','page'],
-      shop:['boutique','e commerce','catalogue'],
+    const INTENTS={
+      logo:['logo'],
+      brand:['charte','identite','couleur','typo','style'],
+      print:['affiche','flyer','poster'],
+      video:['video','reel','story','spot'],
+      site:['site','vitrine','page web'],
+      shop:['boutique','e commerce','store'],
       webapp:['application web','app web'],
       mobile:['application mobile','app mobile'],
-      convert:['conversion','site vers app'],
-      redesign:['refonte','ameliore','modernise'],
-      meta:['facebook','meta','fb'],
+      convert:['conversion','site vers app','pwa','installable'],
+      redesign:['refonte','modernise','ameliore'],
+      meta:['facebook','meta','fb','business manager'],
       tiktok:['tiktok'],
       insta:['instagram','ig'],
       smm:['reseau','social','community','gestion'],
-      train_sell:['vendre en ligne'],
+      train_sell:['formation vendre','vente en ligne'],
       train_site:['formation site'],
-      train_app:['formation app'],
+      train_app:['formation app web'],
       train_ads:['formation pub','formation campagne'],
       train_wp:['wordpress'],
-      train_ai:['ia','intelligence','atelier ia'],
-      support:['maintenance','suivi','support'],
+      train_ai:['ia','intelligence','atelier ia','automation'],
+      support:['maintenance','suivi','assistance'],
       seo:['seo','referencement']
     };
-    const QA=[
-      {k:['logo'], fr:'Je crée un logo simple fidèle à ta marque avec fichiers pour impression et réseaux et une mini notice', en:'I design a simple memorable logo with files for print and social plus a short guide'},
-      {k:['identite','charte'], fr:'Je définis couleurs et typographie pour garder une image cohérente partout', en:'I define colors and type to keep a consistent image everywhere'},
-      {k:['affiche','flyer'], fr:'Affiches et flyers avec message direct et format pour impression et réseaux', en:'Posters and flyers with a direct message ready for print and social'},
-      {k:['video','reel','story'], fr:'Vidéos courtes qui donnent envie d agir avec sous titres et format TikTok et Meta', en:'Short videos that trigger action with captions and TikTok and Meta format'},
-      {k:['site','vitrine'], fr:'Site clair rapide et beau pour expliquer et convaincre en quelques secondes', en:'Clear fast and beautiful site to explain and convince in seconds'},
-      {k:['boutique','e commerce'], fr:'Catalogue propre et fiches qui vendent panier démo et paiement sur demande', en:'Clean catalog with converting pages demo cart and payment on request'},
-      {k:['application web','app web'], fr:'App web avec interface claire composants utiles et déploiement simple', en:'Web app with clear interface useful components and simple deploy'},
-      {k:['application mobile','app mobile'], fr:'App mobile progressive icône et ajout sur écran d accueil', en:'Progressive mobile app with icon and add to home screen'},
-      {k:['conversion','site vers app'], fr:'Je rends ton site installable et rapide pour engager plus souvent', en:'I make your site installable and fast to drive repeat engagement'},
-      {k:['refonte'], fr:'Audit UX UI parcours simplifié design actuel et contenu convaincant', en:'UX UI audit simplified flow modern style and convincing copy'},
-      {k:['facebook','meta'], fr:'Plan clair test créatif et suivi simple pour chaque dépense', en:'Clear plan creative testing and simple reporting for each spend'},
-      {k:['tiktok'], fr:'Formats courts ciblage propre et contenu percutant', en:'Short formats focused targeting and compelling content'},
-      {k:['instagram','ig'], fr:'Stories et Reels qui captent et dirigent vers ton offre', en:'Stories and Reels that capture attention and drive to your offer'},
-      {k:['reseau','social','gestion'], fr:'Calendrier éditorial visuels vidéos courtes et réponses', en:'Editorial calendar visuals short videos and replies'},
-      {k:['formation','vendre en ligne'], fr:'De l idée à la première vente avec page et tunnel simple', en:'From idea to first sale with page and simple funnel'},
-      {k:['formation site'], fr:'Créer un site utile contenu SEO de base et mise en ligne', en:'Build a useful site with basic SEO and go live'},
-      {k:['formation app'], fr:'App web de A à Z structure composants et publication', en:'Web app from zero structure components and publish'},
-      {k:['formation pub','campagne'], fr:'Ciblage budget analyse et optimisation', en:'Targeting budget analysis and optimization'},
-      {k:['wordpress'], fr:'Thème extensions utiles et sécurité simple', en:'Theme useful plugins and simple security'},
-      {k:['ia','atelier ia'], fr:'Prompts utiles et automatisations no code et low code', en:'Useful prompts and no code and low code automations'},
-      {k:['maintenance','support'], fr:'Je reste disponible pour améliorations et suivi', en:'I remain available for improvements and support'},
-      {k:['seo','referencement'], fr:'Balises propres vitesse et contenu utile', en:'Clean tags speed and useful content'}
-    ];
-    /* Ajouter des entrées de salutations et de routage */
-    function greet(){
-      return CUR_LANG==='fr'
-        ? 'Salut je peux t aider sur logo site boutique app pub réseaux formation et IA Que veux tu faire'
-        : 'Hi I can help with logo site store app ads social training and AI What do you want to do';
-    }
-    function routeHelp(){
-      return CUR_LANG==='fr'
-        ? 'Tu peux écrire par exemple logo ou site ou boutique ou pub ou formation'
-        : 'You can type for example logo or site or store or ads or training';
+
+    const ANSWERS_FR={
+      logo:'Je crée un logo simple et mémorable avec fichiers pour impression et réseaux et une notice claire. Dis moi le nom de ta marque et le style que tu aimes et je te propose un plan rapide.',
+      brand:'Je définis couleurs et typographies pour garder une image cohérente partout. Je fournis un guide simple pour ton équipe.',
+      print:'Affiches et flyers avec message direct et visuel percutant. Prêts pour impression et réseaux.',
+      video:'Vidéos courtes qui donnent envie d agir avec sous titres et format TikTok et Meta. Nous partons d un script simple.',
+      site:'Site rapide et clair pour expliquer et convaincre. Je propose une structure et une mise en ligne simple.',
+      shop:'Boutique propre et fiches qui vendent. Paiement sur demande selon pays et banque.',
+      webapp:'App web avec interface claire et composants utiles pour ton besoin.',
+      mobile:'App mobile progressive installable avec icône.',
+      convert:'Je rends ton site installable et plus rapide pour engager plus souvent.',
+      redesign:'Audit UX UI et corrections visibles. Style actuel et contenu convaincant.',
+      meta:'Plan clair, test créatif et suivi simple. Chaque dépense sert un objectif.',
+      tiktok:'Formats courts, ciblage propre et contenu percutant.',
+      insta:'Stories et Reels qui captent et dirigent vers ton offre.',
+      smm:'Calendrier éditorial, visuels et vidéos courtes. Tu restes présent sans y passer tes journées.',
+      train_sell:'De l idée à la première vente avec page qui convertit et tunnel simple.',
+      train_site:'Créer un site utile avec contenu et SEO de base puis mise en ligne.',
+      train_app:'Construire une app web claire avec composants et publication.',
+      train_ads:'Piloter des campagnes avec ciblage, budget et optimisation.',
+      train_wp:'WordPress avec thème, extensions utiles et sécurité simple.',
+      train_ai:'Prompts utiles et automatisations no code et low code sur des cas concrets.',
+      support:'Maintenance et petites évolutions, au rythme qui te convient.',
+      seo:'Balises propres, vitesse et contenu utile pour gagner en visibilité.'
+    };
+
+    function detectIntent(text){
+      const t=text.toLowerCase();
+      for(const k in INTENTS){ if(INTENTS[k].some(w=>t.includes(w))) return k; }
+      return null;
     }
     function replyBot(q){
-      const text=q.toLowerCase().trim();
-      if(!text) return '';
-      if(GREETINGS.some(g=>text.includes(g))) return greet();
-      for(const item of QA){ if(item.k.some(k=>text.includes(k))){ return CUR_LANG==='fr'? item.fr : item.en; } }
-      // orientation par routes
-      for(const key in ROUTES){
-        if(ROUTES[key].some(k=>text.includes(k))){
-          return CUR_LANG==='fr'
-            ? 'Bonne idée je prépare un plan rapide et une mise en ligne claire écris moi sur WhatsApp pour lancer ' + WA_LINK
-            : 'Good choice I prepare a quick plan and clear launch write to me on WhatsApp to start ' + WA_LINK;
-        }
+      const t=q.toLowerCase().trim();
+      if(!t) return '';
+      if(GREETINGS.some(g=>t.includes(g))){
+        return 'Salut je peux t aider sur logo site boutique app pub formation et IA Que veux tu faire';
       }
-      // fallback
-      return CUR_LANG==='fr'
-        ? 'Je n ai pas cette réponse ici écris directement à Martial sur WhatsApp ' + WA_LINK
-        : 'I do not have this answer here write to Martial on WhatsApp ' + WA_LINK;
-    }
-    function addQuickReplies(){
-      const box=document.createElement('div'); box.className='msg ai';
-      box.innerHTML='Choisis une option rapide Logo • Site • Boutique • App web • App mobile • Pub Meta • Pub TikTok • Pub Instagram • Refonte • Formation';
-      botBody.appendChild(box); botBody.scrollTop=botBody.scrollHeight;
+      const intent=detectIntent(t);
+      if(intent && ANSWERS_FR[intent]){
+        return ANSWERS_FR[intent] + ' Tu peux m écrire ici ou sur WhatsApp pour lancer ' + WA_LINK;
+      }
+      return 'Je propose un plan rapide et une mise en ligne claire. Écris moi sur WhatsApp pour avancer ' + WA_LINK;
     }
     function sendBot(){
       const v=botInput.value.trim(); if(!v) return;
-      addMsg(v,'me'); const r=replyBot(v); setTimeout(()=>{ addMsg(r,'ai'); if(GREETINGS.some(g=>v.toLowerCase().includes(g))) addQuickReplies(); },200);
+      addMsg(v,'me'); const r=replyBot(v); setTimeout(()=>addMsg(r,'ai'),200);
       botInput.value='';
     }
     botSend.addEventListener('click',sendBot); botInput.addEventListener('keydown',e=>{ if(e.key==='Enter'){ e.preventDefault(); sendBot(); } });
@@ -698,25 +582,20 @@
     adClose.addEventListener('click',()=>ad.classList.remove('show'));
     ad.addEventListener('click',e=>{ if(e.target===ad) ad.classList.remove('show'); });
 
-    /* Largeur propre mobile et bureau et fin nette après footer */
-    (function enforceLayout(){
-      document.body.style.overflowX='hidden';
-      $$('.container').forEach(c=>{ c.style.maxWidth='1240px'; c.style.margin='0 auto'; });
-      const end=$('.endStop'); end.style.height='1px';
-    })();
-
-    /* Images sûres */
+    /* Fin nette après footer */
     window.addEventListener('load',()=>{
-      $$('img').forEach(img=>{ img.referrerPolicy='no-referrer'; });
+      document.body.style.marginBottom='0';
+      document.documentElement.style.overflowY='auto';
+      // Empêche tout espace après le footer
+      const last= document.getElementById('foot');
+      const observer=new ResizeObserver(()=>{ window.scrollTo(0, Math.min(window.scrollY, document.body.scrollHeight - window.innerHeight)); });
+      observer.observe(last);
     });
 
-    /* Montre viewer à la demande */
-    const viewerOpenHandler=e=>{
-      const b=e.target.closest('[data-open]'); if(!b) return;
-    };
-    document.addEventListener('click',viewerOpenHandler);
+    /* Images sûres */
+    window.addEventListener('load',()=>{ $$('img').forEach(img=>{ img.referrerPolicy='no-referrer'; }); });
 
-    /* Thème initial sombre et fix viewport */
+    /* Thème initial et vh */
     function setVH(){document.documentElement.style.setProperty('--vh', window.innerHeight+'px')}
     setVH(); window.addEventListener('resize',()=>{clearTimeout(window._vh); window._vh=setTimeout(setVH,120)});
   </script>
