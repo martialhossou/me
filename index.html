@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Martial HOSSOU • </title>
-  <meta name="description" content="Sites, apps, identité visuelle, publicités, réseaux, formations et IA. Parcours clair, design élégant et résultats concrets."/>
+  <title>Martial HOSSOU •</title>
+  <meta name="description" content="Sites, apps, identité visuelle, publicités, réseaux, formations et IA. Parcours clair, design élégant, résultats concrets."/>
   <meta name="theme-color" content="#000000"/>
   <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Polices luxe (titres) + lisibilité (texte) -->
@@ -13,7 +13,7 @@
     :root{
       --bg:#000; --panel:#0D0F14; --panel2:#0A0C11;
       --ink:#F2F4F8; --muted:#9CA5B3; --line:#1A1D26;
-      --gold:#FFD700; --gold2:#FFF099; --accent:#2EC4B6;
+      --gold:#FFD700; --gold2:#FFF099; --accent:#2EC4B6; --violet:#7A7CFF;
       --shadow:0 22px 70px rgba(0,0,0,.55);
       --glow:0 0 0 1px rgba(255,215,0,.06), 0 10px 30px rgba(255,215,0,.08), inset 0 0 0 1px rgba(255,255,255,.04);
       --r:18px; --maxw:1240px; --vh:100vh; --headerH:78px;
@@ -22,7 +22,7 @@
     [data-theme="light"]{
       --bg:#FFFFFF; --panel:#F7F8FA; --panel2:#FFFFFF;
       --ink:#0B132B; --muted:#5C647A; --line:#E7EBF3;
-      --gold:#FFD700; --gold2:#FFE680; --accent:#2EC4B6;
+      --gold:#FFD700; --gold2:#FFE680; --accent:#2EC4B6; --violet:#4C56FF;
       --shadow:0 18px 60px rgba(9,17,34,.10);
     }
     *,*::before,*::after{box-sizing:border-box}
@@ -49,7 +49,7 @@
     .logo{font-weight:900;letter-spacing:.2px;white-space:nowrap}
     nav ul{display:flex;gap:24px;list-style:none;margin:0;padding:0;flex-wrap:nowrap}
     nav a{font-weight:800;position:relative;white-space:nowrap}
-    nav a:after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--gold2));transition:width .25s}
+    nav a:after{content:"";position:absolute;left:0;bottom:-6px;height:2px;width:0;background:linear-gradient(90deg,var(--gold),var(--violet));transition:width .25s}
     nav a:hover:after{width:100%}
     .actions{display:flex;align-items:center;gap:10px;flex-wrap:nowrap}
     .hamb{display:none;flex-direction:column;gap:4px;border:1px solid var(--line);background:var(--panel2);color:var(--ink);border-radius:10px;padding:10px}
@@ -64,8 +64,8 @@
     .drawerClose{border:0;background:var(--gold);color:#201A00;padding:.55rem 1rem;border-radius:10px;font-weight:900}
     .drawerBody a{display:block;padding:16px 20px;border-bottom:1px solid var(--line);font-weight:800}
 
-    /* Hero + parallaxe */
-    .hero{position:relative;isolation:isolate}
+    /* Hero + parallaxe + couleurs */
+    .hero{position:relative;isolation:isolate;background:radial-gradient(1200px 600px at 10% 10%, rgba(255,215,0,.05), transparent), radial-gradient(900px 500px at 90% 0%, rgba(42,196,182,.08), transparent)}
     .hero .container{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;min-height:calc(var(--vh) - var(--headerH));padding-block:64px}
     h1{font-weight:900;font-size:clamp(34px,5.2vw,62px);line-height:1.06;margin:0}
     .lead{font-size:clamp(16px,1.2vw,18px);color:var(--muted);max-width:64ch}
@@ -75,18 +75,21 @@
     .layer{position:absolute;border-radius:50%;filter:blur(22px);opacity:.55;transform:translate3d(0,0,0)}
     .l1{width:520px;height:520px;background:radial-gradient(closest-side, rgba(255,215,0,.22), transparent 70%);left:-120px;top:-120px}
     .l2{width:380px;height:380px;background:radial-gradient(closest-side, rgba(46,196,182,.18), transparent 70%);right:-90px;top:-80px}
-    .l3{width:260px;height:260px;background:radial-gradient(closest-side, rgba(255,240,153,.18), transparent 70%);right:12%;bottom:-60px}
+    .l3{width:260px;height:260px;background:radial-gradient(closest-side, rgba(122,124,255,.18), transparent 70%);right:12%;bottom:-60px}
 
     /* Sections */
     section{padding-block:86px;border-top:1px solid var(--line);background:linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.02) 100%)}
     .title{font-size:30px;margin:0 0 10px}
     .sub{color:var(--muted);margin:0 0 24px}
 
-    /* Grids + cartes avec glow */
+    /* Grids + cartes variées avec glow */
     .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
     .card{border:1px solid var(--line);border-radius:var(--r);background:var(--panel);box-shadow:var(--glow);overflow:hidden;position:relative}
-    .card .hd{padding:16px 18px;border-bottom:1px solid var(--line);background:linear-gradient(180deg, rgba(255,255,255,.02), transparent);display:flex;align-items:center;gap:10px}
+    .card.alt{background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(122,124,255,.06));border-color:#1a1f3a}
+    .card.brand{background:linear-gradient(180deg, rgba(255,215,0,.06), rgba(255,255,255,.02));border-color:#3b3412}
+    .card.turq{background:linear-gradient(180deg, rgba(46,196,182,.06), rgba(255,255,255,.02));border-color:#183632}
+    .card .hd{padding:16px 18px;border-bottom:1px solid var(--line);display:flex;align-items:center;gap:10px}
     .card .bd{padding:18px}
     .icon{width:20px;height:20px;display:inline-block;flex:0 0 20px}
 
@@ -95,13 +98,13 @@
     [data-theme="light"] .card .bd,[data-theme="light"] .card .hd{color:#fff}
     [data-theme="light"] .muted{color:#D0D6E6}
 
-    /* Benefits détaillé */
+    /* Benefits */
     .benefits{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
     .benefit h3{margin:0 0 8px}
     .benefit p{margin:0}
     @media (max-width:980px){.benefits{grid-template-columns:1fr}}
 
-    /* Portfolio (captures réelles via mShots) */
+    /* Portfolio (captures réelles via thum.io) */
     .portfolio{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
     @media (max-width:1100px){.portfolio{grid-template-columns:repeat(3,1fr)}}
     @media (max-width:820px){.portfolio{grid-template-columns:repeat(2,1fr)}}
@@ -125,7 +128,11 @@
     .modalFoot{padding:10px;border-top:1px solid var(--line);display:flex;gap:8px;justify-content:flex-end}
 
     /* CTA et footer */
-    .band{border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02));padding:20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;box-shadow:var(--glow)}
+    .band{border:1px solid var(--line);border-radius:16px;background:
+      linear-gradient(180deg, rgba(255,255,255,.04), rgba(255,255,255,.02)),
+      radial-gradient(600px 200px at 5% 0%, rgba(255,215,0,.08), transparent),
+      radial-gradient(600px 200px at 95% 0%, rgba(122,124,255,.08), transparent);
+      padding:20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;box-shadow:var(--glow)}
     footer{padding-block:46px;border-top:1px solid var(--line);text-align:center}
 
     /* Bouton retour haut + WhatsApp flottant */
@@ -141,6 +148,27 @@
     .announceHead{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;border-bottom:1px solid var(--line)}
     .announceBody{padding:18px}
     .announceFoot{padding:12px;border-top:1px solid var(--line);display:flex;gap:10px;justify-content:flex-end}
+
+    /* Services carousel */
+    .services-hero{position:relative;overflow:hidden;border-radius:16px;border:1px solid var(--line);box-shadow:var(--glow);
+      background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(46,196,182,.06));}
+    .slide{display:grid;grid-template-columns:80px 1fr;gap:14px;align-items:center;opacity:0;transform:translateY(10px) scale(.98);transition:opacity .6s ease, transform .6s ease}
+    .slide.active{opacity:1;transform:translateY(0) scale(1)}
+    .slide .bigIcon{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;
+      background:linear-gradient(135deg, rgba(255,215,0,.2), rgba(122,124,255,.18));border:1px solid var(--line)}
+    .slide h3{margin:0}
+    .slide p{margin:6px 0 10px;color:var(--muted)}
+    .svcCtrls{display:flex;gap:8px;align-items:center;margin-top:10px}
+    .svcCtrls .dot{width:8px;height:8px;border-radius:999px;background:#3b3f55}
+    .svcCtrls .dot.on{background:linear-gradient(90deg,var(--gold),var(--violet))}
+    .svcBtns{margin-left:auto;display:flex;gap:8px}
+
+    .svcList{display:none;margin-top:16px}
+    .svcList.show{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    @media (max-width:980px){.svcList.show{grid-template-columns:1fr}}
+    .svcCard{border:1px solid var(--line);border-radius:16px;background:var(--panel);box-shadow:var(--glow);overflow:hidden}
+    .svcCard .hd{display:flex;align-items:center;gap:10px;padding:14px 16px;border-bottom:1px solid var(--line)}
+    .svcCard .bd{padding:14px 16px}
 
     /* Responsif */
     @media (max-width:980px){
@@ -217,18 +245,17 @@
       <h2 class="title">À propos</h2>
       <p class="sub">Je t’accompagne de l’idée au lancement pour que tes pages, tes visuels et tes outils parlent clairement à tes clients. But simple • plus de demandes sérieuses et plus de ventes.</p>
       <div class="grid3">
-        <article class="card">
+        <article class="card brand">
           <div class="hd"><strong>Contact</strong></div>
           <div class="bd">
             <div>WhatsApp • <a href="https://wa.me/22952964028" target="_blank" rel="noopener">+229 52 96 40 28</a></div>
-            <div>Facebook • <a href="https://facebook.com/creativeentreprise" target="_blank" rel="noopener">CREATIVE ENTREPRISE</a></div>
           </div>
         </article>
-        <article class="card">
+        <article class="card alt">
           <div class="hd"><strong>Engagement</strong></div>
           <div class="bd">Tu avances sans stress. Je t’explique chaque étape et je te propose les meilleures actions à court terme.</div>
         </article>
-        <article class="card">
+        <article class="card turq">
           <div class="hd"><strong>Résultat</strong></div>
           <div class="bd">Chaque décision sert un objectif clair : attirer, convaincre et transformer.</div>
         </article>
@@ -236,205 +263,47 @@
     </div>
   </section>
 
-  <!-- Services (icônes + descriptions vendeuses + CTA unique) -->
+  <!-- Services : Carrousel 1 par 1 + bouton Voir tout -->
   <section id="services">
     <div class="container">
       <h2 class="title">Services</h2>
       <p class="sub">Choisis ce qui peut te faire gagner des clients maintenant. Je m’adapte à ton contexte et je te guide simplement.</p>
 
-      <div class="grid3">
-        <!-- Identité -->
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 2l3 7h7l-5.5 4.1L18.5 21 12 16.9 5.5 21l1.9-7.9L2 9h7z"/></svg>
-            <strong>Logo</strong>
+      <!-- HERO CAROUSEL -->
+      <div class="services-hero" id="svcHero" aria-live="polite" aria-roledescription="carousel">
+        <!-- Slides générées par JS -->
+        <div class="svcCtrls" style="padding:12px 14px">
+          <div id="svcDots" style="display:flex;gap:6px"></div>
+          <div class="svcBtns">
+            <button class="btn ghost" id="svcPrev" aria-label="Précédent">◀</button>
+            <button class="btn ghost" id="svcNext" aria-label="Suivant">▶</button>
+            <button class="btn gold" id="svcAll" aria-expanded="false">Voir tous les services</button>
           </div>
-          <div class="bd"><p>Un signe simple et mémorable. Je t’aide à fixer un style qui inspire confiance dès le premier regard.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M4 6h16v2H4zm0 5h16v2H4zm0 5h10v2H4z"/></svg>
-            <strong>Charte graphique</strong>
-          </div>
-          <div class="bd"><p>Couleurs et typographies qui donnent une image nette et cohérente partout, en ligne et hors ligne.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M3 4h18v14H3zM7 20h10v2H7z"/></svg>
-            <strong>Affiches et flyers</strong>
-          </div>
-          <div class="bd"><p>Un visuel clair qui attire et un message direct qui pousse à l’action. Tu es prêt à diffuser.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <!-- Contenu et pub -->
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M4 5h16v10H4zM2 17h20v2H2z"/></svg>
-            <strong>Vidéo publicitaire</strong>
-          </div>
-          <div class="bd"><p>Des vidéos courtes qui donnent envie d’agir. Formats parfaits pour TikTok et Meta, sous-titres inclus.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 2a10 10 0 100 20 10 10 0 000-20zM11 6h2v6h-2zm0 8h2v2h-2z"/></svg>
-            <strong>Campagnes Meta</strong>
-          </div>
-          <div class="bd"><p>Un plan simple, des tests intelligents et un suivi compréhensible. Chaque dépense sert un objectif précis.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 22l-3-6H3l5-4-2-6 6 4 6-4-2 6 5 4h-6z"/></svg>
-            <strong>Campagnes TikTok</strong>
-          </div>
-          <div class="bd"><p>Des formats qui captent vite l’attention. On mise sur la clarté et la répétition utile pour convertir.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M7 2h10v4H7zM5 6h14l-2 16H7z"/></svg>
-            <strong>Campagnes Instagram</strong>
-          </div>
-          <div class="bd"><p>Stories et Reels qui dirigent vers ton offre. Tu vois rapidement ce qui marche et on ajuste ensemble.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M4 4h16v6H4zm0 8h10v8H4z"/></svg>
-            <strong>Gestion réseaux</strong>
-          </div>
-          <div class="bd"><p>Calendrier simple, visuels réguliers et réponses rapides. Ta page reste vivante sans te prendre tout ton temps.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <!-- Web et apps -->
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M4 5h16v10H4zM2 17h20v2H2z"/></svg>
-            <strong>Site vitrine</strong>
-          </div>
-          <div class="bd"><p>Un site rapide et élégant. Tes visiteurs comprennent en quelques secondes ce que tu proposes et comment te joindre.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M6 6h12v4H6zM4 10h16v8H4z"/></svg>
-            <strong>Boutique en ligne</strong>
-          </div>
-          <div class="bd"><p>Catalogue propre, fiches qui donnent envie et parcours simple. Paiement réel possible selon ton pays et ta banque.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M4 4h16v12H4zM2 18h20v2H2z"/></svg>
-            <strong>Application web</strong>
-          </div>
-          <div class="bd"><p>Une interface claire pour un besoin précis. On va droit à l’essentiel pour rendre le service utile rapidement.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M7 2h10v4H7zM5 6h14l-2 16H7z"/></svg>
-            <strong>Application mobile</strong>
-          </div>
-          <div class="bd"><p>Version installable avec icône et écran de lancement. Tu peux la proposer directement à ton audience.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 2l7 7-7 7-7-7z"/></svg>
-            <strong>Conversion site vers app</strong>
-          </div>
-          <div class="bd"><p>Ton site devient installable. Chargements rapides et expérience fluide pour créer plus de retours.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 3l9 6-9 6-9-6zM3 16h18v2H3z"/></svg>
-            <strong>Refonte</strong>
-          </div>
-          <div class="bd"><p>On garde ce qui marche, on simplifie le reste. Style actuel, texte clair et parcours qui guide vers l’action.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <!-- Formations et IA -->
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 2l10 6-10 6L2 8zM4 14h16v2H4z"/></svg>
-            <strong>Formation vendre en ligne</strong>
-          </div>
-          <div class="bd"><p>De l’idée à la première vente. On clarifie l’offre, on pose une page efficace et on lance des actions simples.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M4 4h16v12H4zM2 18h20v2H2z"/></svg>
-            <strong>Formation site</strong>
-          </div>
-          <div class="bd"><p>Créer un site utile et beau. Tu apprends à structurer, écrire, optimiser et publier sans blocage.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M4 6h16v10H4zM2 4h20v2H2z"/></svg>
-            <strong>Formation app web</strong>
-          </div>
-          <div class="bd"><p>Concevoir une app claire avec une base solide. Tu sais où tu vas et tu publies une première version utile.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 3l9 6-9 6-9-6z"/></svg>
-            <strong>Formation campagnes</strong>
-          </div>
-          <div class="bd"><p>Ciblage, budget et optimisation. Tu pilotes tes annonces avec assurance et tu sais quand ajuster.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M4 4h16v8H4zM2 12h20v2H2z"/></svg>
-            <strong>Formation WordPress</strong>
-          </div>
-          <div class="bd"><p>De l’installation aux réglages utiles. Tu adoptes de bonnes bases stables et sécurisées.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 2a7 7 0 017 7v2h3v7H2v-7h3V9a7 7 0 017-7z"/></svg>
-            <strong>Ateliers IA</strong>
-          </div>
-          <div class="bd"><p>Prompts utiles et automatisations concrètes pour gagner du temps au quotidien et mieux servir tes clients.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
-
-        <article class="card">
-          <div class="hd">
-            <svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="M12 3l9 6-9 6-9-6zM3 16h18v2H3z"/></svg>
-            <strong>Conseil et suivi</strong>
-          </div>
-          <div class="bd"><p>Tu n’es pas seul. Je t’aide à prioriser et à garder le cap avec des points réguliers et des actions simples.</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">En discuter sur WhatsApp</a></div>
-        </article>
+        </div>
       </div>
+
+      <!-- LISTE COMPLETE (masquée au départ) -->
+      <div class="svcList" id="svcList"></div>
     </div>
   </section>
 
-  <!-- Ce que vous gagnez (plus détaillé) -->
+  <!-- Ce que vous gagnez -->
   <section id="benefits">
     <div class="container">
       <h2 class="title">Ce que vous gagnez</h2>
       <p class="sub">Plus de clarté, plus de confiance, plus de ventes. Des actions simples qui changent tout.</p>
       <div class="benefits">
-        <article class="card benefit"><div class="bd"><h3>Clarté immédiate</h3><p class="muted">Ton message est compris tout de suite. Tes offres sont faciles à choisir et à comparer.</p></div></article>
-        <article class="card benefit"><div class="bd"><h3>Crédibilité visible</h3><p class="muted">Une image nette et cohérente qui rassure tes visiteurs et tes partenaires.</p></div></article>
-        <article class="card benefit"><div class="bd"><h3>Conversion réelle</h3><p class="muted">Des parcours sans friction qui mènent vers un contact ou une vente, sans perdre les bonnes intentions.</p></div></article>
-        <article class="card benefit"><div class="bd"><h3>Vitesse d’exécution</h3><p class="muted">On lance vite, on mesure, on ajuste. Tu vois des avancées concrètes chaque semaine.</p></div></article>
-        <article class="card benefit"><div class="bd"><h3>Autonomie simple</h3><p class="muted">Tu peux publier et mettre à jour sans dépendre de moi pour chaque détail.</p></div></article>
-        <article class="card benefit"><div class="bd"><h3>Suivi serein</h3><p class="muted">Des points réguliers et des décisions claires. Tu restes concentré sur ce qui rapporte.</p></div></article>
+        <article class="card benefit brand"><div class="bd"><h3>Clarté immédiate</h3><p class="muted">Ton message est compris tout de suite. Tes offres sont faciles à choisir et à comparer.</p></div></article>
+        <article class="card benefit alt"><div class="bd"><h3>Crédibilité visible</h3><p class="muted">Une image nette et cohérente qui rassure tes visiteurs et tes partenaires.</p></div></article>
+        <article class="card benefit turq"><div class="bd"><h3>Conversion réelle</h3><p class="muted">Des parcours sans friction qui mènent vers un contact ou une vente.</p></div></article>
+        <article class="card benefit brand"><div class="bd"><h3>Vitesse d’exécution</h3><p class="muted">On lance vite, on mesure, on ajuste. Avancées visibles chaque semaine.</p></div></article>
+        <article class="card benefit alt"><div class="bd"><h3>Autonomie simple</h3><p class="muted">Tu peux publier et mettre à jour sans dépendre de moi pour chaque détail.</p></div></article>
+        <article class="card benefit turq"><div class="bd"><h3>Suivi serein</h3><p class="muted">Des points réguliers et des décisions claires. Tu restes concentré sur ce qui rapporte.</p></div></article>
       </div>
     </div>
   </section>
 
-  <!-- Portfolio (captures issues des sites réels via mShots) -->
+  <!-- Portfolio (captures réelles via thum.io) -->
   <section id="portfolio">
     <div class="container">
       <h2 class="title">Portfolio</h2>
@@ -547,7 +416,147 @@
     const themeToggle=$('#themeToggle');
     themeToggle.addEventListener('click',()=>{const d=document.documentElement; d.dataset.theme=d.dataset.theme==='light'?'dark':'light';});
 
-    /* Portfolio data (captures via mShots) */
+    /* Apostrophes automatiques (typo FR) */
+    (function() {
+      const selectors = "h1,h2,h3,h4,h5,h6,p,li,button,a,div.bd,div.sub,div.hd,.lead,.title";
+      const apostrophe = "’";
+      const rules = [
+        {re:/\baujourd\s+hui\b/gi, rep:m=>m.replace(/\s+hui/i, apostrophe+"hui")},
+        {re:/\b([dDlLjJnNcCsSmMtTQq]u?)\s+(?=([aeiouyâàäéèêëîïôöùûüœh]))/g, rep:(_,p)=>p+apostrophe},
+        {re:/\bqu\s+(?=[ie])/gi, rep:()=> "qu"+apostrophe},
+        {re:/\bl\s+(?=[aeiouyâàäéèêëîïôöùûüœh])/gi, rep:()=> "l"+apostrophe},
+        {re:/\b([cCjJnNsSmMtT])\s+(?=[aeéèêiouy])/g, rep:(_,p)=>p+apostrophe}
+      ];
+      document.querySelectorAll(selectors).forEach(el=>{
+        let txt=el.textContent; rules.forEach(r=>{ txt=txt.replace(r.re,r.rep); }); el.textContent=txt;
+      });
+    })();
+
+    /* ===== SERVICES DATA (icônes + texte + CTA) ===== */
+    const SVCS=[
+      {k:'logo',      title:'Logo', icon:'M12 2l3 7h7l-5.5 4.1L18.5 21 12 16.9 5.5 21l1.9-7.9L2 9h7z', 
+        desc:'Un signe simple et mémorable. On fixe un style qui inspire confiance au premier regard.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'charte',    title:'Charte graphique', icon:'M4 6h16v2H4zm0 5h16v2H4zm0 5h10v2H4z',
+        desc:'Couleurs et typographies qui donnent une image nette et cohérente partout, en ligne et hors ligne.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'flyer',     title:'Affiches et flyers', icon:'M3 4h18v14H3zM7 20h10v2H7z',
+        desc:'Un visuel clair qui attire et un message direct qui pousse à l’action. Tu es prêt à diffuser.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'video',     title:'Vidéo publicitaire', icon:'M4 5h16v10H4zM2 17h20v2H2z',
+        desc:'Des vidéos courtes qui donnent envie d’agir. Formats TikTok et Meta, sous-titres inclus.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'meta',      title:'Campagnes Meta', icon:'M12 2a10 10 0 100 20 10 10 0 000-20zM11 6h2v6h-2zm0 8h2v2h-2z',
+        desc:'Un plan simple, des tests intelligents et un suivi compréhensible. Chaque dépense a un objectif.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'tiktok',    title:'Campagnes TikTok', icon:'M12 22l-3-6H3l5-4-2-6 6 4 6-4-2 6 5 4h-6z',
+        desc:'Formats qui captent vite l’attention. Clarté du message et répétition utile pour convertir.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'insta',     title:'Campagnes Instagram', icon:'M7 2h10v4H7zM5 6h14l-2 16H7z',
+        desc:'Stories et Reels qui dirigent vers ton offre. On voit rapidement ce qui marche.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'smm',       title:'Gestion réseaux', icon:'M4 4h16v6H4zm0 8h10v8H4z',
+        desc:'Calendrier simple, visuels réguliers et réponses rapides. Présence solide sans y passer tes journées.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'site',      title:'Site vitrine', icon:'M4 5h16v10H4zM2 17h20v2H2z',
+        desc:'Un site rapide et élégant. On comprend vite ce que tu proposes et comment te joindre.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'shop',      title:'Boutique en ligne', icon:'M6 6h12v4H6zM4 10h16v8H4z',
+        desc:'Catalogue propre, fiches qui donnent envie et parcours simple. Paiement possible selon ton pays.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'webapp',    title:'Application web', icon:'M4 4h16v12H4zM2 18h20v2H2z',
+        desc:'Interface claire pour un besoin précis. On va droit à l’essentiel pour être utile rapidement.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'mobile',    title:'Application mobile', icon:'M7 2h10v4H7zM5 6h14l-2 16H7z',
+        desc:'Version installable avec icône et écran de lancement. Tu engages plus souvent ton audience.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'pwa',       title:'Conversion site vers app', icon:'M12 2l7 7-7 7-7-7z',
+        desc:'Ton site devient installable. Chargements rapides, expérience fluide et retours plus fréquents.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'redesign',  title:'Refonte', icon:'M12 3l9 6-9 6-9-6zM3 16h18v2H3z',
+        desc:'On garde ce qui marche, on simplifie le reste. Style actuel, texte clair et parcours qui guide.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'sell',      title:'Formation vendre en ligne', icon:'M12 2l10 6-10 6L2 8zM4 14h16v2H4z',
+        desc:'De l’idée à la première vente. On pose une page efficace et des actions simples.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'siteTrain', title:'Formation site', icon:'M4 4h16v12H4zM2 18h20v2H2z',
+        desc:'Créer un site utile et beau. Structure, écriture, SEO de base et mise en ligne.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'appTrain',  title:'Formation app web', icon:'M4 6h16v10H4zM2 4h20v2H2z',
+        desc:'Concevoir une app claire avec une base solide. Tu publies une première version utile.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'adsTrain',  title:'Formation campagnes', icon:'M12 3l9 6-9 6-9-6z',
+        desc:'Ciblage, budget et optimisation. Tu pilotes tes annonces avec assurance.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'wp',        title:'Formation WordPress', icon:'M4 4h16v8H4zM2 12h20v2H2z',
+        desc:'De l’installation aux réglages utiles. Bases stables et sécurisées.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'ai',        title:'Ateliers IA', icon:'M12 2a7 7 0 017 7v2h3v7H2v-7h3V9a7 7 0 017-7z',
+        desc:'Prompts utiles et automatisations concrètes pour gagner du temps et mieux servir tes clients.',
+        cta:'En discuter sur WhatsApp'},
+      {k:'support',   title:'Conseil et suivi', icon:'M12 3l9 6-9 6-9-6zM3 16h18v2H3z',
+        desc:'Tu n’es pas seul. On priorise, on garde le cap avec des points réguliers.',
+        cta:'En discuter sur WhatsApp'}
+    ];
+
+    /* Build slide + dots */
+    const svcHero=$('#svcHero'), dots=$('#svcDots'), svcPrev=$('#svcPrev'), svcNext=$('#svcNext'), svcAll=$('#svcAll'), svcList=$('#svcList');
+    let idx=0, timer=null;
+    function slideTpl(s){
+      return `<div class="slide">
+        <div class="bigIcon"><svg width="28" height="28" viewBox="0 0 24 24" fill="#FFD700"><path d="${s.icon}"/></svg></div>
+        <div>
+          <h3>${s.title}</h3>
+          <p>${s.desc}</p>
+          <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">${s.cta}</a>
+            <a class="btn ghost" href="#contact">Contact</a>
+          </div>
+        </div>
+      </div>`;
+    }
+    function mountSlides(){
+      const wrap=document.createElement('div'); wrap.style.padding='14px 16px';
+      wrap.id='svcSlides';
+      wrap.innerHTML=slideTpl(SVCS[0]);
+      svcHero.insertBefore(wrap, svcHero.children[0]);
+      dots.innerHTML=SVCS.map((_,i)=>`<span class="dot${i===0?' on':''}" data-i="${i}"></span>`).join('');
+    }
+    function show(i){
+      idx=(i+SVCS.length)%SVCS.length;
+      const wrap=$('#svcSlides');
+      wrap.innerHTML=slideTpl(SVCS[idx]);
+      requestAnimationFrame(()=>{ const slide=wrap.querySelector('.slide'); slide.classList.add('active'); });
+      $$('#svcDots .dot').forEach((d,k)=>d.classList.toggle('on',k===idx));
+    }
+    function next(){ show(idx+1); }
+    function prev(){ show(idx-1); }
+    function auto(){ clearInterval(timer); timer=setInterval(()=>{ next(); }, 4500); }
+
+    svcNext.addEventListener('click',()=>{ next(); auto(); });
+    svcPrev.addEventListener('click',()=>{ prev(); auto(); });
+    dots.addEventListener('click',e=>{ const d=e.target.closest('.dot'); if(!d) return; show(+d.dataset.i); auto(); });
+
+    /* Liste complète */
+    function cardTpl(s){
+      const tone = (s.k==='logo'||s.k==='redesign'||s.k==='sell') ? 'brand' : (s.k==='site'||s.k==='shop'||s.k==='webapp'||s.k==='mobile'||s.k==='pwa') ? 'turq' : 'alt';
+      return `<article class="svcCard ${tone}">
+        <div class="hd"><svg class="icon" viewBox="0 0 24 24" fill="#FFD700"><path d="${s.icon}"/></svg><strong>${s.title}</strong></div>
+        <div class="bd"><p>${s.desc}</p><a class="btn gold" href="https://wa.me/22952964028" target="_blank" rel="noopener">${s.cta}</a></div>
+      </article>`;
+    }
+    function mountList(){ svcList.innerHTML=SVCS.map(cardTpl).join(''); }
+    svcAll.addEventListener('click',()=>{
+      const showAll = !svcList.classList.contains('show');
+      svcList.classList.toggle('show', showAll);
+      svcAll.setAttribute('aria-expanded',showAll);
+      svcAll.textContent = showAll ? 'Masquer la liste' : 'Voir tous les services';
+      if(showAll) svcList.scrollIntoView({behavior:'smooth',block:'start'});
+    });
+
+    mountSlides(); show(0); auto(); mountList();
+
+    /* ===== PORTFOLIO (captures réelles via thum.io) ===== */
     const PORTFOLIO=[
       {t:'LuxeMart', type:'Boutique', url:'https://martialhossou.github.io/LuxeMart/'},
       {t:'CE PDF', type:'Outil', url:'https://martialhossou.github.io/CE-PDF/'},
@@ -567,10 +576,16 @@
       {t:'ClipFeed', type:'Streaming', url:'https://martialhossou.github.io/ClipFeed/'}
     ];
     const pfGrid=$('#pfGrid');
-    function thumb(url){ return 'https://s.wordpress.com/mshots/v1/' + encodeURIComponent(url) + '?w=900'; }
+    function thumb(url){ 
+      // Capture réelle par thum.io ; fallback picsum si indispo
+      return 'https://image.thum.io/get/width/900/noanimate/' + encodeURIComponent(url);
+    }
     function pfCard(p){
       return `<article class="pitem">
-        <div class="pcover"><img src="${thumb(p.url)}" alt="${p.t}"><span class="pill ptag">${p.type}</span></div>
+        <div class="pcover">
+          <img src="${thumb(p.url)}" alt="${p.t}" onerror="this.onerror=null;this.src='https://picsum.photos/seed/${encodeURIComponent(p.t)}/900/600';">
+          <span class="pill ptag">${p.type}</span>
+        </div>
         <div class="pbody"><h4>${p.t}</h4>
           <div class="pactions">
             <button class="btn gold" data-open="${encodeURIComponent(p.url)}">Voir</button>
@@ -602,23 +617,7 @@
     adClose.addEventListener('click',()=>ad.classList.remove('show'));
     ad.addEventListener('click',e=>{ if(e.target===ad) ad.classList.remove('show'); });
 
-    /* Apostrophes automatiques (sécurisé) */
-    (function() {
-      const selectors = "h1,h2,h3,h4,h5,h6,p,li,button,a,div.bd,div.sub,div.hd,.lead,.title";
-      const apostrophe = "’";
-      const rules = [
-        {re:/\baujourd\s+hui\b/gi, rep:m=>m.replace(/\s+hui/i, apostrophe+"hui")},
-        {re:/\b([dDlLjJnNcCsSmMtTQq]u?)\s+(?=([aeiouyâàäéèêëîïôöùûüœh]))/g, rep:(_,p)=>p+apostrophe},
-        {re:/\bqu\s+(?=[ie])/gi, rep:()=> "qu"+apostrophe},
-        {re:/\bl\s+(?=[aeiouyâàäéèêëîïôöùûüœh])/gi, rep:()=> "l"+apostrophe},
-        {re:/\b([cCjJnNsSmMtT])\s+(?=[aeéèêiouy])/g, rep:(_,p)=>p+apostrophe}
-      ];
-      document.querySelectorAll(selectors).forEach(el=>{
-        let txt=el.textContent; rules.forEach(r=>{ txt=txt.replace(r.re,r.rep); }); el.textContent=txt;
-      });
-    })();
-
-    /* Fin nette après footer (pas de défilement en plus) */
+    /* Fin nette après footer */
     window.addEventListener('load',()=>{
       document.body.style.marginBottom='0';
       document.documentElement.style.overflowY='auto';
